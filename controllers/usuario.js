@@ -12,7 +12,7 @@ router.get('/', (request, response) => {
             Nombre,
             Apellido,
             Correo
-        FROM administrador;
+        FROM usuario;
     `;
 
     connection.query(sql, (error, results) => {
@@ -29,4 +29,4 @@ router.get('/', (request, response) => {
     });               
 });
 
-module.exports = router; // Exportamos el router correctamente
+module.exports = router; 

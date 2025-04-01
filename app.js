@@ -33,9 +33,11 @@ app.get("/api/test/",function(request,response){
 
 // Test de la api donde llama el "inicia servidor"
 const administradorRoutes = require('./controllers/administrador');
+const usuarioRoutes = require('./controllers/usuario');
  // En proseso...
 
 function controladores() {
     // Rutas 
     app.use('/api/administrador', administradorRoutes);
+    app.use('/api/usuario', usuarioRoutes);
 }
