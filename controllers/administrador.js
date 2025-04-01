@@ -1,22 +1,30 @@
 require('dotenv').config();
 const express = require('express');
 const connection = require('../config/config');
-const app = express();
 
+const router = express.Router(); // Usamos Router en vez de `app`
 
-module.exports.buscar_todo = app.get('/administrador', (request, response) => {  
+// Definir la ruta correctamente
+router.get('/', (request, response) => {  
     const sql = `
-            SELECT
-                id_admin,
-                Nombre
-            FROM administrador
-        `;
+        SELECT
+            id_admin,
+            Nombre
+        FROM administrador;
+    `;
+
     connection.query(sql, (error, results) => {
-        if (error) throw error;
+        if (error) {
+            console.error("Error en la consulta:", error);
+            response.status(500).send("Error en el servidor");
+            return;
+        }
         if (results.length > 0) {
-            response.status(200).send(results);
+            response.status(200).json(results);
         } else {
             response.status(204).send('Sin resultado');
         }
     });               
 });
+
+module.exports = router; // Exportamos el router correctamente

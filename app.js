@@ -28,13 +28,13 @@ app.listen(port, function (){
 
 // Test de la api donde llama el "inicia servidor"
 app.get("/api/test/",function(request,response){
-	response.send("Bienvenido a API FERREMAS S.A DUOC UC :D , esta es una prueba de la API");
+	response.send("Bienvenido a API FERREMAS S.A DUOC UC: Administrador");
 });
 
-const administrador = require('./controllers/administrador');
+const administradorRoutes = require('./controllers/administrador');
  // En proseso...
 
 function controladores() {
     // Rutas 
-    app.use('/api/administrador/', administrador.buscar_todo);
+    app.use('/api/administrador', administradorRoutes);
 }

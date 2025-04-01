@@ -17,7 +17,7 @@ connection.connect(function(err) {
 module.exports = connection;  
 
 // **************************************************************************************************************************************
-//  pasos para la base de datos : Api FERREMAS S.A DUOC UC.
+//  pasos para la base de datos : Api FERREMAS S.A DUOC UC. Administrador.
 // **************************************************************************************************************************************
 //  El primer paso debemos dejar en el terminal con este codigo: node app.js  
 //  Segundo, luego le da un URL que es : http://localhost:5500/api/test/
