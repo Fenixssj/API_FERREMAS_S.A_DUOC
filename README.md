@@ -1,5 +1,5 @@
 # API_FERREMAS_S.A_DUOC
-API: FERREMAS_S.A_DUOC
+API: FERREMAS_S.A_DUOC: Administrador
 # Instalación
 Inicializar una consola en la carpeta y ejecutar el siguiente comando: npm install
 
