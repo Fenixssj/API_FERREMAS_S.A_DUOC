@@ -31,6 +31,7 @@ app.get("/api/test/",function(request,response){
 	response.send("Bienvenido a API FERREMAS S.A DUOC UC: Administrador");
 });
 
+// Test de la api donde llama el "inicia servidor"
 const administradorRoutes = require('./controllers/administrador');
  // En proseso...
 
